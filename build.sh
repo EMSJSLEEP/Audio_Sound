@@ -1,5 +1,9 @@
 source /Applications/XMOS_XTC_15.3.1/SetEnv.sh
 
+export XMOS_MODULE_PATH=/Users/cwu/Desktop/GIT/Audio_Sound
+export XCOMMON_DISABLE_AUTO_MODULE_SEARCH=1
+
+xmake -C /Users/cwu/Desktop/GIT/Audio_Sound/app_usb_aud_xk_216_mc 2i4o4xxxxx.clean
 xmake -C /Users/cwu/Desktop/GIT/Audio_Sound/app_usb_aud_xk_216_mc 2i4o4xxxxx.all
 
 xflash \

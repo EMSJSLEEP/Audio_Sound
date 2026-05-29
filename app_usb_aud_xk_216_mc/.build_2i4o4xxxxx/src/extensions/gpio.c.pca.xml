@@ -1,8 +1,0 @@
-<preCompilationAnalysis file="../src/extensions/gpio.c">
-  <fCall global="true" name="gpio_set"/>
-  <fCall global="true" name="gpio_set.nstackwords"/>
-  <fCall global="true" name="gpio_set.maxcores"/>
-  <fCall global="true" name="gpio_set.maxtimers"/>
-  <fCall global="true" name="gpio_set.maxchanends"/>
-  <fCall global="true" name="p_gpio"/>
-</preCompilationAnalysis>

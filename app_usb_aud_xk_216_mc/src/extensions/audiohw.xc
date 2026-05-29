@@ -137,7 +137,7 @@ void AudioHwInit(chanend ?c_codec/*, streaming chanend chan_with_usb_audio_core*
     }
 
     i2c_master_init(i2cPorts);
-    si5351a_init(MCLK_48);
+    si5351a_init(DEFAULT_MCLK_FREQ);
     //CODEC_reset();
 }
 
@@ -156,7 +156,7 @@ void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned d
     unsigned int time ;
     unsigned int period = 0; // 100000 timer ticks = 1ms
     /* set audio sample clock source freq */
-    si5351a_init(MCLK_48);
+    si5351a_init(mClk);
     /* Allow MCLK to settle */
     wait_us(20000);
 
@@ -194,4 +194,3 @@ void AudioHwConfig(unsigned samFreq, unsigned mClk, chanend ?c_codec, unsigned d
     DAC_UNMUTE();  /* Unmute*/
     return;
 }
-
